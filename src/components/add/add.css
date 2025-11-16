@@ -1,0 +1,39 @@
+.input-wrapper{
+    padding: 10px;
+    margin: 4em auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.input-wrapper input{
+    padding: 20px;
+    background-color: var(--color-bg-secondary);
+    border: 0.5px solid black;
+    border-radius: 40px;
+    width: calc(50% + 25px);
+    color: white;
+    font-size: 1rem;
+    position: fixed;
+    z-index: 1;
+}
+.result-wrapper{
+    overflow-x: hidden;
+    height: 700px;/*see*/
+    scroll-behavior: smooth;
+}
+.results{
+    list-style-type: none;
+    overflow: none;
+}
+.add-content{
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width:1024px)
+{
+    .input-wrapper input{
+        width: 75%;
+    }
+}
