@@ -4,7 +4,8 @@ import App from "./App";
 import { createContext } from "react";
 import cookie from 'react-cookies'
 //exchange see
-export const server = "https://movie-mania-server-nu.vercel.app";
+export const server = "http://127.0.0.1:8000";
+//"https://movie-mania-server-nu.vercel.app";
 //export const server = "http://localhost:4000";
 const token = cookie.load('token')
 const temp = token?true:false;
