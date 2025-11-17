@@ -12,7 +12,7 @@ export const MovieControls = ({ movie, type }) => {
   // Add setIsAuthenticated to trigger redirects on auth failure
   const { setRefresh, setIsAuthenticated } = useContext(Context);
   const token = cookie.load("token");
-
+  const {isAuthenticated } = useContext(Context);
   // Helper object for toast options
   const toastOptions = {
     autoClose: 1000,
