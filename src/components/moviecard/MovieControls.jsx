@@ -91,7 +91,7 @@ export const MovieControls = ({ movie, type }) => {
       }
     }
   };
-
+  if (!isAuthenticated) return <Navigate to={"/"} />;
   return (
     <div className="controls">
       <div className="card-control">

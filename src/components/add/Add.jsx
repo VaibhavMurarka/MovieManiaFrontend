@@ -14,7 +14,6 @@ export const Add = () => {
   const [progress, setProgress] = useState(0);
   const {isAuthenticated } = useContext(Context);
   console.log(progress);
-  if (!isAuthenticated) return <Navigate to={"/"} />;
 
   const onchange = (e) => {
     e.preventDefault();
@@ -29,7 +28,7 @@ export const Add = () => {
         } 
       });
   };
-
+  if (!isAuthenticated) return <Navigate to={"/"} />;
   return (
     <div>
       <Header/>

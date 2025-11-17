@@ -29,7 +29,6 @@ export const Watchlist = () => {
   const token = cookies.load("token");
 
   // This guard is perfect and will catch auth changes from the effect
-  if (!isAuthenticated) return <Navigate to={"/"} />;
   
   useEffect(() => {
     // Define an async function inside the effect
@@ -73,7 +72,7 @@ export const Watchlist = () => {
   // Update dependencies array
   }, [refresh, setRefresh, setWatchlist, setIsAuthenticated, token]);
 
- 
+  if (!isAuthenticated) return <Navigate to={"/"} />;
 
   return (
     <div>

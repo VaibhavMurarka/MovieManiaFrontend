@@ -26,8 +26,6 @@ export const Watched = () => {
   
   const token = cookie.load("token");
   
-  // This redirect guard is perfect. It runs before the effect.
-  if (!isAuthenticated) return <Navigate to={"/"} />;
 
   useEffect(() => {
     // Define an async function inside the effect
@@ -70,7 +68,9 @@ export const Watched = () => {
   
   // Add dependencies for all props/state used inside the effect
   }, [refresh, setWatched, setRefresh, setIsAuthenticated, token]);
-
+  
+  if (!isAuthenticated) return <Navigate to={"/"} />;
+  
   return (
     <div>
       <Header />
