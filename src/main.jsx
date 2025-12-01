@@ -4,7 +4,8 @@ import App from "./App";
 import { createContext } from "react";
 import cookie from 'react-cookies'
 //exchange see
-export const server = "https://moviemaniabackend-9w5l.onrender.com";
+export const server = "http://pybeloadbalancer-898910750.ap-south-1.elb.amazonaws.com";
+//"https://moviemaniabackend-9w5l.onrender.com";
 //"https://movie-mania-server-nu.vercel.app";
 //export const server = "http://localhost:4000";
 const token = cookie.load('token')
